@@ -2,7 +2,7 @@
 class Market:
     transaction_fee = 0.005
     def __init__(self) -> None:
-        self.stocks = {"HydroCorp": 123, "BrightFuture": 456}
+        self.stocks = {"HydroCorp": 101, "BrightFuture": 99}
 
     def updateMarket(self):
         #Will be implemented during grading. 
