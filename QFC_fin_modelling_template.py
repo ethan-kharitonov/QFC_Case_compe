@@ -9,7 +9,7 @@ class Market:
         #This function will update the stock values to their "real" values each day.
         pass
  
-class Portfollio:
+class Portfolio:
     def __init__(self) -> None:
         self.shares = {"HydroCorp": 0, "BrightFuture": 0}
         self.cash = 100000
@@ -47,22 +47,20 @@ class Context:
 
     # PUT WHATEVER YOU WANT HERE
 
-def update_portfollio(curMarket: Market, curPortfollio: Portfollio, context: Context):
+def update_portfolio(curMarket: Market, curPortfolio: Portfolio, context: Context):
     # YOUR TRADING STRATEGY GOES HERE
-    curPortfollio.buy("BrightFuture", 1, curMarket)
-    curPortfollio.sell("BrightFuture", 1, curMarket)
     pass
     
 
 ###SIMULATION###
 market = Market()
-portfollio = Portfollio()
+portfolio = Portfolio()
 context = Context()
 
 for i in range(365):
-    update_portfollio(market, portfollio, context)
+    update_portfolio(market, portfolio, context)
     market.updateMarket()
 
-print(portfollio.evaluate(market))
+print(portfolio.evaluate(market))
 
 
